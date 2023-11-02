@@ -40,14 +40,14 @@ export default function MyQuiz() {
     const getQuiz = async (e) => {
         try {
             if(!filterCategory) {
-                const res = await axios.get('http://localhost:8080/user/myQuizzes',{
+                const res = await axios.get('https://quiz-app-ieqe.onrender.com/user/myQuizzes',{
                     headers: {
                         'authorization': localStorage.getItem("token") // Setting the 'Authorization' header with the token
                     }
                 });
                 setQuizArray(res.data);
             } else {
-                const res = await axios.get('http://localhost:8080/user/myQuizzes',{
+                const res = await axios.get('https://quiz-app-ieqe.onrender.com/user/myQuizzes',{
                     headers: {
                         'authorization': localStorage.getItem("token") // Setting the 'Authorization' header with the token
                     }
@@ -62,7 +62,7 @@ export default function MyQuiz() {
     const deleteQuiz = async (id) => {
 
         try {    
-            const res = await axios.delete('http://localhost:8080/quiz/delete/'+id, {
+            const res = await axios.delete('https://quiz-app-ieqe.onrender.com/quiz/delete/'+id, {
                 headers: {
                     'authorization': localStorage.getItem("token") // Setting the 'Authorization' header with the token
                 }
@@ -79,7 +79,7 @@ export default function MyQuiz() {
     const goToLeaderboard = async (id) => {
 
         try {    
-            const res = await axios.get('http://localhost:8080/quiz/byId/'+id, {
+            const res = await axios.get('https://quiz-app-ieqe.onrender.com/quiz/byId/'+id, {
                 headers: {
                     'authorization': localStorage.getItem("token") // Setting the 'Authorization' header with the token
                 }

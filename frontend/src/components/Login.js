@@ -31,7 +31,7 @@ export default function Login() {
       };
 
       try {
-        const res = await axios.post('http://localhost:8080/api/auth',loginData)
+        const res = await axios.post('https://quiz-app-ieqe.onrender.com/api/auth',loginData)
         storeToken(res.data.data);
         navigate("/home")
       } catch (e) {

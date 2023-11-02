@@ -38,7 +38,7 @@ export default function QuizHistory() {
     const getQuiz = async (e) => {
         try {
             if(!filterCategory) {
-                const res = await axios.get('http://localhost:8080/user/history', {
+                const res = await axios.get('https://quiz-app-ieqe.onrender.com/user/history', {
                     headers: {
                         'authorization': localStorage.getItem("token") // Setting the 'Authorization' header with the token
                     }
@@ -46,7 +46,7 @@ export default function QuizHistory() {
                 setquizArray(res.data.quizzes);
                 setscores(res.data.scores)
             } else {
-                const res = await axios.get('http://localhost:8080/user/history', {
+                const res = await axios.get('https://quiz-app-ieqe.onrender.com/user/history', {
                     headers: {
                         'authorization': localStorage.getItem("token") // Setting the 'Authorization' header with the token
                     }
@@ -61,7 +61,7 @@ export default function QuizHistory() {
     const goToLeaderboard = async (id) => {
 
         try {    
-            const res = await axios.get('http://localhost:8080/quiz/byId/'+id, {
+            const res = await axios.get('https://quiz-app-ieqe.onrender.com/quiz/byId/'+id, {
                 headers: {
                     'authorization': localStorage.getItem("token") // Setting the 'Authorization' header with the token
                 }

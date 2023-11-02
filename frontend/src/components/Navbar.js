@@ -11,8 +11,8 @@ export default function Navbar() {
 
     var profilePic = "user1.png"
     try {
-        if(("http://localhost:8080/uploads/"+localStorage.getItem('userId'))){
-            profilePic = "http://localhost:8080/uploads/"+localStorage.getItem('userId')
+        if(("https://quiz-app-ieqe.onrender.com/uploads/"+localStorage.getItem('userId'))){
+            profilePic = "https://quiz-app-ieqe.onrender.com/uploads/"+localStorage.getItem('userId')
         }
     } catch (error) {
         console.error(error);

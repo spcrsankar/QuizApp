@@ -32,7 +32,7 @@ export default function EditProfile() {
           console.log(editData);
           
           try {
-            const res = await axios.put('http://localhost:8080/api/users/update/'+id,editData, {
+            const res = await axios.put('https://quiz-app-ieqe.onrender.com/api/users/update/'+id,editData, {
               headers: {
                   'authorization': localStorage.getItem("token") // Setting the 'Authorization' header with the token
               }
@@ -43,7 +43,7 @@ export default function EditProfile() {
                 for(var x = 0; x<profilePic.length; x++) {
                     data.append('file', profilePic[x])
               }
-              const picres = await axios.post('http://localhost:8080/api/users/upload_user', data, {
+              const picres = await axios.post('https://quiz-app-ieqe.onrender.com/api/users/upload_user', data, {
                 headers: {
                     'authorization': localStorage.getItem("token") // Setting the 'Authorization' header with the token
                 }
@@ -67,7 +67,7 @@ export default function EditProfile() {
             <h3>Edit Profile</h3>
 
             <Form.Group className="mb-3" controlId="profile-pic">
-              {/* <img alt='' src={"http://localhost:8080/uploads/"+localStorage.getItem('userId')} className='edit-profile-pic'/>
+              {/* <img alt='' src={"https://quiz-app-ieqe.onrender.com/uploads/"+localStorage.getItem('userId')} className='edit-profile-pic'/>
               <br/> */}
               <Form.Label className="inp-label">Profile Photo</Form.Label>
               <Form.Control type="file" className="inp inp-user" placeholder='Choose Photo' onChange={handleImage} accept='image/*' />

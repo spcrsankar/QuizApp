@@ -34,7 +34,7 @@ export default function Home() {
     
     const getQuiz = async (e) => {
         try {
-            const res = await axios.get('http://localhost:8080/quiz',{
+            const res = await axios.get('https://quiz-app-ieqe.onrender.com/quiz',{
                 headers: {
                     'authorization': localStorage.getItem("token") // Setting the 'Authorization' header with the token
                 }
@@ -51,7 +51,7 @@ export default function Home() {
 
     const getRecommended = async (e) => {
         try {
-            const res = await axios.get('http://localhost:8080/recommend',{
+            const res = await axios.get('https://quiz-app-ieqe.onrender.com/recommend',{
                 headers: {
                     'authorization': localStorage.getItem("token") // Setting the 'Authorization' header with the token
                 }
@@ -64,14 +64,14 @@ export default function Home() {
 
     const startQuiz = async (id) => {
         try {    
-            const res = await axios.get('http://localhost:8080/quiz/byId/'+id, {
+            const res = await axios.get('https://quiz-app-ieqe.onrender.com/quiz/byId/'+id, {
                 headers: {
                     'authorization': localStorage.getItem("token") // Setting the 'Authorization' header with the token
                 }
             });
             const quiz = res.data;
 
-            const questionRes = await axios.get('http://localhost:8080/attempt_quiz/'+id, {
+            const questionRes = await axios.get('https://quiz-app-ieqe.onrender.com/attempt_quiz/'+id, {
                 headers: {
                     'authorization': localStorage.getItem("token") // Setting the 'Authorization' header with the token
                 }

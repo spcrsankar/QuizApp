@@ -34,7 +34,7 @@ export default function Leaderboard() {
 console.log(quizId);
 console.log(quiz)
         try {    
-            const res = await axios.get('http://localhost:8080/leaderboard/'+quizId, {
+            const res = await axios.get('https://quiz-app-ieqe.onrender.com/leaderboard/'+quizId, {
                 headers: {
                     'authorization': localStorage.getItem("token") // Setting the 'Authorization' header with the token
                 }

@@ -47,7 +47,7 @@ export default function Result() {
 
  
       try {    
-          const res = await axios.post('http://localhost:8080/attempt_quiz/'+id, quizAnswers, {
+          const res = await axios.post('https://quiz-app-ieqe.onrender.com/attempt_quiz/'+id, quizAnswers, {
               headers: {
                   'authorization': localStorage.getItem("token") // Setting the 'Authorization' header with the token
               }

@@ -171,7 +171,7 @@ export default function CreateQuiz() {
                
                 console.log(quizDetails);
                 try {
-                    const res = await axios.post('http://localhost:8080/quiz/create',quizDetails,{
+                    const res = await axios.post('https://quiz-app-ieqe.onrender.com/quiz/create',quizDetails,{
                             headers: {
                                 'authorization': localStorage.getItem("token") // Setting the 'Authorization' header with the token
                             }
