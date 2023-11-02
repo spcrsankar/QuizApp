@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import axios from 'axios'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import "../assets/email.png"
+import email from "../assets/email.png"
 
 export default function Login() {
  
@@ -54,7 +54,7 @@ export default function Login() {
                 <h3>Login</h3>
 
                 <Form.Group className="mb-3" controlId="email">
-                  <Form.Label className="inp-label"><img className="icon" src="email.png" alt="Email"/>Email Address</Form.Label>
+                  <Form.Label className="inp-label"><img className="icon" src={email} alt="Email"/>Email Address</Form.Label>
                   <Form.Control type="email" className="inp inp-user" placeholder='Enter Email' onChange={(e) => setEmail(e.target.value)} autoComplete='email' required/>
                 </Form.Group>
 
